@@ -153,6 +153,11 @@ var _hmt = _hmt || [];
                 碎碎念
                 <div class="category-count">1</div>
             </a>
+        
+            <a class="category-link" href="/categories/Writeup/">
+                Writeup
+                <div class="category-count">1</div>
+            </a>
         </div>
     </div>
   </div>
@@ -160,6 +165,13 @@ var _hmt = _hmt || [];
 
     
       
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Crypto/" rel="tag">Crypto</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Misc/" rel="tag">Misc</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Osint/" rel="tag">Osint</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Reverse/" rel="tag">Reverse</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
+    </div>
+  </div>
+
 
     
   </div>
@@ -170,7 +182,7 @@ var _hmt = _hmt || [];
    
 
 
-<article id="post-text" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-0xGame2025 week1 wp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -181,7 +193,7 @@ var _hmt = _hmt || [];
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/11/13/text/">$text$</a>
+        <a class="p-name article-title" href="/2025/10/09/0xGame2025%20week1%20wp/">0xGame2025 week1 Writeup</a>
       </h1>
     
   
@@ -189,30 +201,39 @@ var _hmt = _hmt || [];
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-11-13T09:08:52.000Z" itemprop="datePublished">2025-11-13</time>
+  <time class="dt-published" datetime="2025-10-09T09:08:52.000Z" itemprop="datePublished">2025-10-09</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-    未分类 
+  <a class="meta-cate-link" href="/categories/Writeup/">Writeup</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            0 词 
+            5.9k 词 
           </div>
           <div class="need-seperator meta-info">
-            1 分钟
+            10 分钟
           </div>
         </div>
         
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Crypto/" rel="tag">Crypto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Misc/" rel="tag">Misc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Osint/" rel="tag">Osint</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reverse/" rel="tag">Reverse</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
+
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              
+              WebLemon点开链接按照提示ctrl+U查看网站源码，直接得到flag
+Misc签到-0xGame按要求做得到flag，签到题真好（点头）
+Sign_in观察感觉给的字符串像是base64加密，利用cyberchef解出为 0hQkwo{Govm0wo_d0_0hQ4w3_2y25@xn_r@mu_Pyb_peX}，看格式非常像flag。尝试把开头六个字符凑成0xGame，发现字母偏移了10位，还原得到flag
+公众号原稿下载文件，将文件格式改为.zip后解压，题目里给了一个提示gift，在.zip文件中的docProps文件夹里找到gift.xml，用自带的记事本打开得到flag
+![image-20261026213612122](.&#x2F;0xGame2025 week1 wp.assets&#x2F;image-20261026213612122-1793023019540-1.png)
+Zootopia下载附件得到了一张图片，猜测是图片隐写，放到Stegsolve里看看，Data Extract里选择LSB看最低有效位，发现flag在最上方
+
+Pwnez_She...
             
           </div>
         
@@ -224,7 +245,7 @@ var _hmt = _hmt || [];
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/11/13/text/" 
+      href="/2025/10/09/0xGame2025%20week1%20wp/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
