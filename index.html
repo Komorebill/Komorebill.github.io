@@ -212,10 +212,10 @@ var _hmt = _hmt || [];
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            3.8k 词 
+            2.7k 词 
           </div>
           <div class="need-seperator meta-info">
-            6 分钟
+            5 分钟
           </div>
         </div>
         
@@ -227,11 +227,15 @@ var _hmt = _hmt || [];
           <div class="truncate-text">
             
               Web你好，爪洼脚本开启容器后点开链接，是一串颜文字，搜索得知是“颜文字混淆题”，JavaScript混淆中常见的类型，复制颜文字放到de4js里进行AAencode解码，得到
-![屏幕截图 2025-10-12 161458](.&#x2F;0xGame2025 week2 wp.assets&#x2F;屏幕截图 2025-10-12 161458-1793190120567-4.png)
+
 再按题目要求处理得到flag
 MiscezShiro用wireshark打开解压后的文件，观察到有一串明显的base64加密字符串，放到解密工具解密得到一串有花括号的字符串，看着像乱序的flag。观察字符串，发现开头有向左开口的花括号，猜测字符串可能是倒序，将顺序反过来，发现字母偏移了，放到在线网站rot解密得到flag
-![image-20261028202414121](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028202414121.png)
-ezEXIF按照提示下载exiftool，cmd看见图片信息，输入命令按要求改动信息...
+
+ezEXIF按照提示下载exiftool，cmd看见图片信息，输入命令按要求改动信息，但发现Date&#x2F;Time Original无法改成要求的数据（数据不合法），先改成一个合法数据占位
+
+接下来将文件放到010editor里，搜索刚刚改好的合法数据，手动将其改为要求值，提交得到flag
+
+删库跑路题目名叫删库跑路，可能是暗示flag藏在没删干净的库里面，打开果然看到有.git文件。在wsl里进入目录，检查工作区和最近提交，发现3个已删除文件，恢复在HEAD中的文件，用cat...
             
           </div>
         

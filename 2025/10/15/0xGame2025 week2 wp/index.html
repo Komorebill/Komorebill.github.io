@@ -32,20 +32,32 @@ var _hmt = _hmt || [];
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="Web你好，爪洼脚本开启容器后点开链接，是一串颜文字，搜索得知是“颜文字混淆题”，JavaScript混淆中常见的类型，复制颜文字放到de4js里进行AAencode解码，得到 ![屏幕截图 2025-10-12 161458](.&#x2F;0xGame2025 week2 wp.assets&#x2F;屏幕截图 2025-10-12 161458-1793190120567-4.png) 再按">
+  <meta name="description" content="Web你好，爪洼脚本开启容器后点开链接，是一串颜文字，搜索得知是“颜文字混淆题”，JavaScript混淆中常见的类型，复制颜文字放到de4js里进行AAencode解码，得到  再按题目要求处理得到flag MiscezShiro用wireshark打开解压后的文件，观察到有一串明显的base64加密字符串，放到解密工具解密得到一串有花括号的字符串，看着像乱序的flag。观察字符串，发现开头有向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="0xGame2025 week2 Writeup">
 <meta property="og:url" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/index.html">
 <meta property="og:site_name" content="komorebi">
-<meta property="og:description" content="Web你好，爪洼脚本开启容器后点开链接，是一串颜文字，搜索得知是“颜文字混淆题”，JavaScript混淆中常见的类型，复制颜文字放到de4js里进行AAencode解码，得到 ![屏幕截图 2025-10-12 161458](.&#x2F;0xGame2025 week2 wp.assets&#x2F;屏幕截图 2025-10-12 161458-1793190120567-4.png) 再按">
+<meta property="og:description" content="Web你好，爪洼脚本开启容器后点开链接，是一串颜文字，搜索得知是“颜文字混淆题”，JavaScript混淆中常见的类型，复制颜文字放到de4js里进行AAencode解码，得到  再按题目要求处理得到flag MiscezShiro用wireshark打开解压后的文件，观察到有一串明显的base64加密字符串，放到解密工具解密得到一串有花括号的字符串，看着像乱序的flag。观察字符串，发现开头有向">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-12%20161458-1793190120567-4.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/image-20261028202414121.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-14%20121341-1793190535312-6.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/image-20261028202931580.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-14%20164652-1793190586378-8.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-14%20183659-1793190714804-12.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/image-20261028203734295.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/image-20261028212556252.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/image-20261028212611411.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/image-20261028212825204.png">
+<meta property="og:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/image-20261028212852004.png">
 <meta property="article:published_time" content="2025-10-15T11:18:52.000Z">
-<meta property="article:modified_time" content="2026-10-28T14:03:35.080Z">
+<meta property="article:modified_time" content="2026-10-29T13:03:51.368Z">
 <meta property="article:author" content="komorebi">
 <meta property="article:tag" content="Misc">
 <meta property="article:tag" content="Reverse">
 <meta property="article:tag" content="Web">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://komorebii.top/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-12%20161458-1793190120567-4.png">
   
     <link rel="alternate" href="/atom.xml" title="komorebi" type="application/atom+xml">
   
@@ -218,10 +230,10 @@ var _hmt = _hmt || [];
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            3.8k 词 
+            2.7k 词 
           </div>
           <div class="need-seperator meta-info">
-            6 分钟
+            5 分钟
           </div>
         </div>
         
@@ -231,22 +243,22 @@ var _hmt = _hmt || [];
       <div class="e-content article-entry" itemprop="articleBody">
         
           <h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="你好，爪洼脚本"><a href="#你好，爪洼脚本" class="headerlink" title="你好，爪洼脚本"></a>你好，爪洼脚本</h2><p>开启容器后点开链接，是一串颜文字，搜索得知是“颜文字混淆题”，JavaScript混淆中常见的类型，复制颜文字放到de4js里进行AAencode解码，得到</p>
-<p>![屏幕截图 2025-10-12 161458](.&#x2F;0xGame2025 week2 wp.assets&#x2F;屏幕截图 2025-10-12 161458-1793190120567-4.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-12%20161458-1793190120567-4.png" alt="屏幕截图 2025-10-12 161458"></p>
 <p>再按题目要求处理得到flag</p>
 <h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="ezShiro"><a href="#ezShiro" class="headerlink" title="ezShiro"></a>ezShiro</h2><p>用wireshark打开解压后的文件，观察到有一串明显的base64加密字符串，放到解密工具解密得到一串有花括号的字符串，看着像乱序的flag。观察字符串，发现开头有向左开口的花括号，猜测字符串可能是倒序，将顺序反过来，发现字母偏移了，放到在线网站rot解密得到flag</p>
-<p>![image-20261028202414121](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028202414121.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/image-20261028202414121.png" alt="image-20261028202414121"></p>
 <h2 id="ezEXIF"><a href="#ezEXIF" class="headerlink" title="ezEXIF"></a>ezEXIF</h2><p>按照提示下载exiftool，cmd看见图片信息，输入命令按要求改动信息，但发现Date&#x2F;Time Original无法改成要求的数据（数据不合法），先改成一个合法数据占位</p>
-<p>![屏幕截图 2025-10-14 121341](.&#x2F;0xGame2025 week2 wp.assets&#x2F;屏幕截图 2025-10-14 121341-1793190535312-6.png)</p>
-<p>接下来将文件放到101editor里，搜索刚刚改好的合法数据，手动将其改为要求值，提交得到flag</p>
-<p>![image-20261028202931580](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028202931580.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-14%20121341-1793190535312-6.png" alt="屏幕截图 2025-10-14 121341"></p>
+<p>接下来将文件放到010editor里，搜索刚刚改好的合法数据，手动将其改为要求值，提交得到flag</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/image-20261028202931580.png" alt="image-20261028202931580"></p>
 <h2 id="删库跑路"><a href="#删库跑路" class="headerlink" title="删库跑路"></a>删库跑路</h2><p>题目名叫删库跑路，可能是暗示flag藏在没删干净的库里面，打开果然看到有.git文件。在wsl里进入目录，检查工作区和最近提交，发现3个已删除文件，恢复在HEAD中的文件，用cat查看main.py</p>
-<p>![屏幕截图 2025-10-14 164652](.&#x2F;0xGame2025 week2 wp.assets&#x2F;屏幕截图 2025-10-14 164652-1793190586378-8.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-14%20164652-1793190586378-8.png" alt="屏幕截图 2025-10-14 164652"></p>
 <p><del>找到flag了</del>（bushi）</p>
 <p>这应该是加密方式，先做了凯撒加密，然后是XOR，最后Base64编码，所以要拿到的是Base64编码的字符串，然后按逻辑反向解密</p>
 <p>再查看output文件，里面果然是Base64编码字符串</p>
-<p>![屏幕截图 2025-10-14 183659](.&#x2F;0xGame2025 week2 wp.assets&#x2F;屏幕截图 2025-10-14 183659-1793190714804-12.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-10-14%20183659-1793190714804-12.png" alt="屏幕截图 2025-10-14 183659"></p>
 <p>赛博厨子</p>
-<p>![image-20261028203734295](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028203734295.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/image-20261028203734295.png" alt="image-20261028203734295"></p>
 <h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h2 id="算数高手"><a href="#算数高手" class="headerlink" title="算数高手"></a>算数高手</h2><p>下载附件放到die，使pylnstaller打包</p>
 <p>按pylnstaller常规流程解包，得到babyPy.exe_extracted，包含多个.pyc文件</p>
 <p>放到在线网站</p>
@@ -254,14 +266,14 @@ var _hmt = _hmt || [];
 
 <h2 id="BabyJar"><a href="#BabyJar" class="headerlink" title="BabyJar"></a>BabyJar</h2><p>下载附件拿到一个.zip文件，点开得到BabyJar.jar文件，将其后缀名改为.zip，解压后点开com&#x2F;BabyJar&#x2F;demo，发现两个文件为BabyJar.class和Encrypt.class</p>
 <p>先将BabyJar.class放到jadx-gui里，得到一串字符串，疑似密文</p>
-<p>![image-20261028212556252](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028212556252.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/image-20261028212556252.png" alt="image-20261028212556252"></p>
 <p>再将Decrypt.class放到jadx-gui里得到加密方式，先对每个字节 XOR 0x14，再交换高低四位，最后Base64编码</p>
-<p>![image-20261028212611411](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028212611411.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/image-20261028212611411.png" alt="image-20261028212611411"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Decrypt</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.key = <span class="number">20</span> </span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">self, encrypted_text</span>):</span><br><span class="line">        encrypted_bytes = base64.b64decode(encrypted_text)</span><br><span class="line"></span><br><span class="line">        original_bytes = <span class="built_in">bytearray</span>(<span class="built_in">len</span>(encrypted_bytes))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(encrypted_bytes)):</span><br><span class="line">            c = encrypted_bytes[i]</span><br><span class="line">            swapped = ((c &amp; <span class="number">0xF0</span>) &gt;&gt; <span class="number">4</span>) | ((c &amp; <span class="number">0x0F</span>) &lt;&lt; <span class="number">4</span>)</span><br><span class="line">            original_byte = swapped ^ <span class="variable language_">self</span>.key</span><br><span class="line">            original_bytes[i] = original_byte</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> original_bytes.decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    decryptor = Decrypt()</span><br><span class="line">    encrypted_str = <span class="string">&quot;QsY1V5cX9jJyF2JSAgdikwfCEneTAgICUpNnd1Iyk8IXUkJ3QhcyZ8J3YpY=&quot;</span></span><br><span class="line">    decrypted_str = decryptor.decrypt(encrypted_str)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;解密结果: <span class="subst">&#123;decrypted_str&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>![image-20261028212825204](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028212825204.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/image-20261028212825204.png" alt="image-20261028212825204"></p>
 <h2 id="16bit"><a href="#16bit" class="headerlink" title="16bit"></a>16bit</h2><p>拿到文件后双击无法运行，下载DOSBox，在DOSBox里运行，直接得到flag</p>
-<p>![image-20261028212852004](.&#x2F;0xGame2025 week2 wp.assets&#x2F;image-20261028212852004.png)</p>
+<p><img src="/2025/10/15/0xGame2025%20week2%20wp/image-20261028212852004.png" alt="image-20261028212852004"></p>
 
         
       </div>
